@@ -5,7 +5,7 @@ import re
 
 def validpalindrome(s):
     s_split=''.join(s.split()).lower()
-    text=re.sub(r"[^\w\s]","",s_split)
+    text=re.sub(r"[^a-zA-Z0-9]","",s_split)
     print(text)
     n=len(text)
     if n==0:
@@ -21,6 +21,6 @@ def validpalindrome(s):
 
     return True
 
-s = "race a car"
+s = "ab_a"
 print(validpalindrome(s))
 
